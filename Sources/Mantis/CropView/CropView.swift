@@ -923,8 +923,8 @@ extension CropView: CropViewProtocol {
                 rect.size.width = cropAuxiliaryIndicatorView.frame.height
                 rect.size.height = cropAuxiliaryIndicatorView.frame.width
                 
-                let newRect = GeometryHelper.getInscribeRect(fromOutsideRect: getContentBounds(), andInsideRect: rect)
-                viewModel.cropBoxFrame = newRect
+//                let newRect = GeometryHelper.getInscribeRect(fromOutsideRect: getContentBounds(), andInsideRect: rect)
+                viewModel.cropBoxFrame = rect
             }
             
             let rotateAngle = newRotateType == .clockwise ? CGFloat.pi / 2 : -CGFloat.pi / 2
