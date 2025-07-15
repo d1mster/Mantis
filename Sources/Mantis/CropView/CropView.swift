@@ -920,10 +920,10 @@ extension CropView: CropViewProtocol {
         func handleRotateAnimation() {
             if cropViewConfig.rotateCropBoxFor90DegreeRotation {
                 var rect = cropAuxiliaryIndicatorView.frame
-                rect.size.width = cropAuxiliaryIndicatorView.frame.height
-                rect.size.height = cropAuxiliaryIndicatorView.frame.width
+                rect.size.height = cropAuxiliaryIndicatorView.frame.height
+                rect.size.width = cropAuxiliaryIndicatorView.frame.width
                 
-//                let newRect = GeometryHelper.getInscribeRect(fromOutsideRect: getContentBounds(), andInsideRect: rect)
+                let newRect = GeometryHelper.getInscribeRect(fromOutsideRect: getContentBounds(), andInsideRect: rect)
                 viewModel.cropBoxFrame = rect
             }
             
